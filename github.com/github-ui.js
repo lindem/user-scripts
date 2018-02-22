@@ -20,15 +20,15 @@
   function $$$(selector) {
     const sel = $(selector);
     if (sel.length === 0) {
-      throw new Error("GH-TM-UI: Selector did not work; stopping script");
+      throw new Error('GH-TM-UI: Selector did not work; stopping script');
     } else {
       return sel;
     }
   }
 
   // we need the username; get it from the "your profile" link
-  const username = $$$("a.dropdown-item:contains(Your profile)")
-    .attr("href")
+  const username = $$$('a.dropdown-item:contains(Your profile)')
+    .attr('href')
     .slice(1);
 
   /**
@@ -37,7 +37,7 @@
    * @method insertRepoLink
    */
   function insertRepoLink() {
-    const repolink = "https://github.com/" + username + "?tab=repositories";
+    const repolink = 'https://github.com/' + username + '?tab=repositories';
     const ui = $(
       `<li><a class="HeaderNavlink px-2" href="${repolink}"> Repos </li>`
     );
